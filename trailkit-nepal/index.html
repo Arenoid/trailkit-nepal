@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta 
   name = "description"
-  content="TrailKit Nepal: Your trekking buddy apparently.">
+  content="Dablam: Your trekking buddy apparently.">
 
   <meta name = "theme-color" content = "#f7f7f2">
 
-  <title>TrailKit Nepal | Online Companion (for now)</title>
+  <title>Dablam | Online Companion (for now)</title>
 </head>
 <body>
   <div class = "application-layout">
     <aside class = "application-sidebar">
-      <a href = "#" class = "brand-link" aria-label="TrailKit Nepal Home">
+      <a href = "#" class = "brand-link" aria-label="Dablam Home">
         <span class = "brand-link_icon">▲</span>
 
-        <span class = "brand-link_name">TrailKit</span class = brand-link_suffix>.nepal</span>
+        <span class = "brand-link_name">Dablam</span class = brand-link_suffix></span>
       </span>
       </a>
 
@@ -30,7 +30,7 @@
 
         <a href = "#gear" class = "navigation-link">
           <span class = "navigation-link_icon">▤</span>
-          <span>Gear Library</span>
+          <span>Gears</span>
         </a>
 
         <a href = "#journal" class = "navigation-link">
@@ -44,11 +44,11 @@
           <span class = "offline-status_indicatior"></span>
           <div class = "offline-stats__details">
             <strong class = "offline-status_title">
-              Offline Ready
+              Works Offline
             </strong>
 
             <small class = "offline-status__description">
-              Your trails, Your data.
+              Your trails, Your Adventure.
             </small>
           </div>
         </div>
@@ -107,11 +107,188 @@
           role = "img"
           aria-label = "Illustration of Himalayan Mountains">
         
+          <circle cx = "350" cy = "65" r = "25" fill = "#e7c88b"/>
+
+          <polygon points = "0,260 130, 80 260, 260" fill = "#d9dfca"/>
+          <polygon points = "150, 260 290,40 440,260" fill = "#8fa68c"/>
+          <polygon points = "0,260 220,190 440, 260 440,300 0,300"
+          fill = "#405c49"/>
+
         </svg>
+        <span class = "mountain-llustration__caption">
+          28°00' N · HIMALAYAS
+        </span>
         </div>
       </section>
-    </main>
-  </div>
+
+      <section
+      class = "dashboard-statistics"
+      aria-label = "Your trekking statistics">
+      
+      <article class = "statistics-card">
+        <span class = "statistic-card_icon">◎</span>
+
+        <span class = "statistic-card__label">
+          TRIPS PLANNED
+        </span>
+
+        <strong class = "statistics-card__value">
+          00
+        </strong>
+
+        <small class = "statistic-card__description">
+          Your next journey awaits
+        </small>
+      </article>
+
+      <article class = "statistic-card">
+        <span class = "statistic-card__icon">▤</span>
+        <span class = "statistics-card__label">GEAR ITEMS</span>
+
+        <strong class = "statistics-card__value">00
+        </strong>
+
+        <small class = "statistic-card__description">
+          Your kits starts here</small>
+      </article>
+
+      <article class = "statistic-card">
+        <span class = "statistic-card__icon">↗</span>
+        <span class = "statistic-card__label">TRAIL DISTANCE</span>
+
+        <strong class = "statistic-card__value">
+          0<small>km</small>
+        </strong>
+
+        <small class = "statistic-card__description">Every Journey Counts</small>
+      </article>
+    </section>
+
+    <div class = "workspace-heading">
+      <div>
+        <span class = "section-eyebrow">
+          YOUR ADVENTURES
+        </span>
+
+        <h2 class = "workspace-heading__title">
+          Your Workspace
+        </h2>
+      </div>
+      <span class = :workspace-heading__description>
+        Prepare well before leaving.
+      </span>
+    </div>
+
+    <section class = "workspace-grid">
+      <article class = "workspace-card" id = "trips">
+        <div class = "workspace-card__heading">
+          <h3>Upcoming Trips</h3>
+          <span>01</span>
+        </div>
+        <div class = "empty-state">
+          <div class = "empty-state__icon">
+            ⌁
+          </div>
+
+          <h4 class = "empty-state__title">
+            No adventures planned yet.
+          </h4>
+
+          <p class = "empty-state__description">
+            Your next favourite place is waiting to be discovered.
+          </p>
+
+          <button 
+          class = "text-button"
+          id = "create-first-trip-button"
+          type = "button">
+        Create your first trip →</button>
+        </div>
+      </article>
+
+      <article class = "workspace-card" id = "gear">
+        <div class = "workspace-card__heading">
+          <h3>Your Gear</h3>
+          <span>02</span>
+        </div>
+
+        <div class = "gear-list">
+          <div class = "gear-list-item">
+            <span class = "gear-list-item__number">
+              01
+            </span>
+            <div class = "gear-list-item__details">
+              <strong>Backpack</strong>
+              <small>Carry everything you need</small>
+            </div>
+            <span class = "gear-list-item__symbol">
+              ↗
+            </span>
+          </div>
+          <div class = "gear-list-item">
+            <span class = "gear-list-item_number">
+              02
+            </span>
+            <div class = "gear-list-item__details">
+              <strong>Water & Hydration</strong>
+              <small>Drink lots of water</small>
+            </div>
+            <span class = "gear-list-item__symbol">
+              ↗
+            </span>
+          </div>
+
+          <div class = "gear-list-item">
+            <span class = "gear-list-item__number">
+              03
+            </span>
+            <div class = "gear-list-item__details">
+              <strong>First Aid</strong>
+              <small>If anything goes south</small>
+            </div>
+            <span class = "gear-list-item__symbol">
+              ↗
+            </span>
+            </div>
+
+            <p class = "gear-list__note">
+              Example categories . Make your own later.
+            </p>
+          </div>
+      </article>
+    </section>
+
+    <section
+    class = "journal-section"
+    id = "journal">
   
+  <span class = "section-eyebrow">
+    YOUR MEMORIES
+  </span>
+<h2>
+  Adventure Journal
+</h2>
+<p>
+  Write everything you experienced in the trip and of course all the memories made.
+</p>
+</section>
+<footer class = "dashboard-footer">
+  <span>
+    Dablam
+  </span>
+
+  <span>
+    Made for the adventurous
+      </span>
+    </footer>
+  </main>
+</div>
+  <div
+  class = "notification-message"
+  id = "notification-message"
+  role = "status"
+  aria-live = "polite"></div>
+
+  <script type = "module" src = "./src/main.js"></script>
 </body>
 </html>
