@@ -1,20 +1,19 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
-  --background: #fafaf7;
+  --background: #e1eef9;
   --surface: #ffffff;
-  --forest: #354c3b;
-  --forest-dark: #293b30;
-  --stone: #849582;
-  --glacier: #dce5dc;
-  --snow:#f8f8f1;
-  --text: #293b30;
-  --muted: #899187;
-  --border: #e7eae3;
-  --light-green: #eef1e9;
+  --forest: #243b4a;
+  --forest-dark: #162632;
+  --stone: #929482;
+  --glacier: #d5ded5;
+  --snow:#f8f6ef;
+  --text: #303b32;
+  --muted: #777d70;
+  --border: #deded3;
+  --light-green: #e9ece3;
 }
-* {
-  box-sizing: border-box;
-}
+
+* {box-sizing: border-box;}
 
 html {
   scroll-behavior:smooth;
@@ -25,6 +24,14 @@ body{
   min-width:320px;
   background: var(--background);
   color: var(--text);
+  background:
+  linear-gradient(
+    180deg,
+    rgba(216,234,248,0.72) 0%,
+    rgba(225, 238, 249, 0.55) 45%,
+    rgba(235, 242, 248, 0.75) 100%
+  )
+  url("./assets/ama-dablam.jpg") center top / cover fixed no-repeat
 }
 
 button,
@@ -104,7 +111,7 @@ button{
   text-decoration: none;
   font-size:13px;
   border-left: 2px solid transparent;
-  transition: color 0.2s ease, background 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .navigation-link:hover{
@@ -130,7 +137,7 @@ button{
   background: var(--background);
 }
 
-.offline-status__indicator{
+.offline-status__indicatior{
   width: 7px;
   height: 7px;
   flex-shrink: 0;
@@ -204,9 +211,20 @@ button{
   display: flex;
   align-items:center;
   background: #ecefe7;
+  border: 1px solid #e1e0d6;
+  border-radius: 2px 12px 3px 2px;
 }
-
-.welcome-baner__content{
+.welcome-banner__note{
+  position: absolute;
+  top: 22px;
+  right: 25px;
+  font-family: "Segoe Print", "Bradley Hand", cursive;
+  font-size: 12px;
+  color: #727c68;
+  transform: rotate(-5deg);
+  z-index: 3;
+}
+.welcome-banner__content{
   width: 58%;
   position: relative;
   z-index: 2;
@@ -250,7 +268,7 @@ button{
   border: 1px solid var(--forest);
   font-size: 12px;
   font-weight: 500;
-  transition: background 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .primary-button:hover {
@@ -271,13 +289,13 @@ button{
   align-items: flex-end
 }
 
-.mountain-illustration svg {
+.mountain-pics svg {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.mountain-illustration__caption{
+.mountain-llustration__caption{
   position: absolute;
   right:20px;
   bottom:13px;
@@ -286,9 +304,116 @@ button{
   letter-spacing: 2px;
 }
 
-.dashboard-statistics{
-  display:grid;
+.dashboard-statistics  {
+  display: grid;
   grid-template-columns: repeat(3,1fr);
   margin: 28px 0 45px;
-  border-top: 1px solid var(--border);
+  border-top : 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+
+.statistics-card,
+.statistic-card{
+  padding: 21px 20px;
+  border-right :1px solid var(--border);
+}
+
+.statistics-card:first-child{
+  padding-left:0;
+}
+
+.statistic-card:last-child,
+.statistics-card:last-child{
+  border-right: none;
+}
+
+.statistic-card_icon,
+.statistic-card__icon{
+  display:none;
+}
+
+.statistic-card__label,
+.statistics-card__label{
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.statistics-card__value,
+.statistic-card__value{
+  display: block;
+  margin:10px 0 5px;
+  color: var(--forest);
+  font-family: Georgia, serif;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.statistic-card__value small,
+.statistic-card__valye small{
+  font-family: Arial, sans-serif;
+  font-size: 12px
+}
+
+.statistic-card_description{
+  color: var(--muted);
+  font-size: 11px
+}
+
+.workspace-heading{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 18px
+}
+
+.workspace-heading__title{
+  margin:8px 0 0;
+  color: var(--forest-dark);
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.workspace-heading__description{
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.workspace-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.workspace-card{
+  min-height: 235px;
+  padding: 21px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.workspace-card__heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.workspace-card__heading h3 {
+  margin: 0;
+  color: var(--forest-dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.workspace-card__heading span{
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.empty-state{
+  padding: 32px 10px;
+  text-align: center;
 }
