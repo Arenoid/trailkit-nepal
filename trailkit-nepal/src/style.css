@@ -787,3 +787,32 @@ button{
     margin-left: 0;
   }
 }
+
+
+.trip-entry {
+  margin-top: 19px;
+  padding :16px;
+  border-top: 2px solid var (--forest-dark);
+  border-bottom: 1px dashed var(-border);
+  background: #f4f0e5;
+}
+
+
+.trip-entry h4{
+  margin: 0 0 8px;
+  color: var(--forest-dark);
+  font-family: Georgia,serif;
+  font-size: 19px;
+  font-weight: normal;
+}
+
+.trip-entry p {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.trip-entry small{
+  color: var(--stone);
+  font-size: 11px
+}
