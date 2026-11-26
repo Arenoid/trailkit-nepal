@@ -1,16 +1,16 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
-  --background: #e1eef9;
-  --surface: #ffffff;
-  --forest: #243b4a;
-  --forest-dark: #162632;
-  --stone: #929482;
-  --glacier: #d5ded5;
-  --snow:#f8f6ef;
-  --text: #303b32;
-  --muted: #777d70;
-  --border: #deded3;
-  --light-green: #e9ece3;
+  --background: #eee9dd;
+  --surface: #fffdf6;
+  --forest: #294b38;
+  --forest-dark: #1c3025;
+  --stone: #a56b42;
+  --glacier: #b56f43;
+  --snow:#fffdf6;
+  --text: #292c25;
+  --muted: #6d6b5e;
+  --border: #b8b09c;
+  --light-green: #e3e7d9;
 }
 
 * {box-sizing: border-box;}
@@ -24,14 +24,6 @@ body{
   min-width:320px;
   background: var(--background);
   color: var(--text);
-  background:
-  linear-gradient(
-    180deg,
-    rgba(216,234,248,0.72) 0%,
-    rgba(225, 238, 249, 0.55) 45%,
-    rgba(235, 242, 248, 0.75) 100%
-  )
-  url("./assets/ama-dablam.jpg") center top / cover fixed no-repeat
 }
 
 button,
@@ -115,10 +107,8 @@ button{
 }
 
 .navigation-link:hover{
-  color: var(--forest);
-  background: var(--light-green);
-  border-left-color: var(--forest);
-  font-weight: 600;
+  color: var(--snow);
+  background: var(--forest);
 }
 
 .navigation-link__icon{
@@ -214,7 +204,7 @@ button{
   border: 1px solid #e1e0d6;
   border-radius: 2px 12px 3px 2px;
 }
-.welcome-banner__note{
+.welcome-banner_note{
   position: absolute;
   top: 22px;
   right: 25px;
@@ -283,16 +273,21 @@ button{
   position: absolute;
   right:0;
   bottom: 0;
-  width:45%;
+  width:100%;
   display:flex;
   justify-content: center;
   align-items: flex-end
 }
 
-.mountain-pics svg {
+.mountain-pics img {
   display: block;
   width: 100%;
+  max-width: none;
   height: auto;
+  max-height: 280px;
+  object-fit: contain;
+  object-position: bottom center;
+  
 }
 
 .mountain-llustration__caption{
@@ -357,7 +352,7 @@ button{
   font-size: 12px
 }
 
-.statistic-card_description{
+.statistic-card__description{
   color: var(--muted);
   font-size: 11px
 }
@@ -416,4 +411,379 @@ button{
 .empty-state{
   padding: 32px 10px;
   text-align: center;
+}
+
+.empty-state__icon{
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--snow);
+  color: var(--forest);
+  font-size: 23px;
+}
+
+.empty-state__description{
+  max-width: 280px;
+  margin: 0 auto 18px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.text-button{
+  padding: 7px 0;
+  border: none;
+  background: transparent;
+  color: var(--forest);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.text-button:hover{
+  color: var(--glacier)
+}
+
+
+.text-button:focus-visible{
+  outline: 2px solid var(--glacier);
+  outline-offset: 4px;
+}
+
+
+.gear-list{
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-top:22px;
+}
+
+.gear-list-item{
+  display: flex;
+  align-items: center;
+  gap:13px;
+}
+
+.gear-list-item__number,
+.gear-list-item_number{
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--snow);
+  color: var(--forest);
+  font-size: 17px;
+}
+.gear-list-item__details{
+  flex: 1;
+  min-width: 0;
+}
+
+.gear-list-item__details strong{
+  margin: 0 0 4px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+
+.gear-list-item__details small {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.gear-list-item__symbol{
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.gear-list__note{
+  margin-top:22px;
+  padding-top:15px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.journal-section{
+  margin-top: 26px;
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.82);
+}
+
+.journal-section h2{
+  margin: 0 0 9px;
+  color: var(--forest-dark);
+  font-size: 18px;
+}
+
+
+.journal-section p{
+  max-width: 580px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+.dashboard-footer{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 35px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+
+.notification-message{
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 100;
+  max-width: min(350px, calc(100vw- - 40px));
+  padding: 13px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--forest-dark);
+  color:white;
+  font-size: 13px;
+  line-height: 1.5;
+  box-shadow: 0 8px 25px rgba(22,38, 50, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.notification-message--visible{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+@media(max-width: 1000px){
+  .application-layout{
+    grid-template-columns: 210px minmax(0,1fr);
+  }
+
+  .dashboard-content{
+    padding:28px;
+  }
+
+  .mountain-pics{
+    opacity: 0.75;
+  }
+}
+
+@media (max-width: 760px){
+  .application-layout{
+    display: block;
+  }
+
+
+  .application-sidebar{
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    min-height: auto;
+    padding: 18px 22px;
+    background: #e8e1d2;
+    border-right: 2px solid var(--forest-dark);
+    box-shadow: 4px 0 0 #d0c7b3;
+  }
+  
+  .navigation-link--active{
+    color: var(--forest-dark);
+    background: var(--light-green);
+    border-left: 2px solid var(--forest-dark);
+    font-weight: 600;
+  }
+
+  .brand-link{
+    margin-bottom: 8px;
+  }
+
+  .primary-navigation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top:0px;
+  }
+
+  .navigation-link{
+    flex:1;
+    justify-content: center;
+    min-width: 100px;
+  }
+
+
+  .sidebar-section-heading,
+  .sidebar-footer{
+    display: none;
+  }
+
+  .dashboard-content{
+    margin-left: 0;
+    padding: 25px 20px;
+  }
+
+  .welcome-banner{
+    background: #e7e6d7;
+    border: 2px solid var(--forest-dark);
+    border-radius: 2px;
+    box-shadow: 6px 6px 0 #b9b09d;
+  }
+
+  .mountain-pics{
+    opacity: 0.35;
+  }
+
+
+  .dashboard-statistics{
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .workspace-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:480px){
+  .dashboard-content{
+    padding: 20px 15px;
+  }
+
+  .page-header__title{
+    font-size: 25px;
+  }
+
+  .welcome-banner{
+    padding: 24px 20px;
+  }
+
+  .welcome-banner__tittle{
+    font-size:25px;
+  }
+
+  .dashboard-statistics{
+    grid-template-columns: 1fr;
+  }
+
+  .workspace-card{
+    padding: 20px
+  }
+
+  .journal-section{
+    padding: 20px;
+  }
+
+  .dashboard-footer{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notification-message{
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+
+@media(prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.application-sidebar{
+  background: #e8e1d2;
+  border-right: 2px solid var(--forest-dark);
+  box-shadow: 4px 0 0 #d0c7b3;
+}
+
+.navigation-link--active{
+  color: var(--forest-dark);
+  background: var(--light-green);
+  border-left: 2px solid var(--forest-dark);
+  font-weight: 600;
+}
+
+
+.welcome-banner{
+  background: #e7e6d7;
+  border: 2px solid var(--forest-dark);
+  border-radius: 2px;
+  box-shadow: 6px 6px 0 #b9b09d;
+}
+
+.journal-section{
+  margin-top: 32px;
+  padding: 28px 30px;
+  background: #f4f0e5;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--forest-dark);
+  border-radius: 0;
+  box-shadow: 4px 4px 0 #d5cbb8;
+}
+
+.journal-section h2{
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: -0.5px;
+}
+
+@media (min-width: 761px){
+  .welcome-banner__content{
+    width: 50%;
+  }
+
+  .welcome-banner__tittle{
+    font-size: clamp(30px, 3vw, 40px)
+  }
+
+  .mountain-pics{
+    left: auto;
+    right: 0;
+    width: 58%;
+  }
+
+
+  .mountain-pics img {
+    width: 100%;
+    max-width: none;
+    max-height: 280px;
+    height: auot;
+    object-fit: contain;
+    object-position: right bottom;
+    margin-left: 0;
+  }
 }

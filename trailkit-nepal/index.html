@@ -105,19 +105,10 @@
         </div>
 
         <div class = "mountain-pics">
-          <svg
-          viewBox = "0 0 440 300"
-          role = "img"
-          aria-label = "Illustration of Himalayan Mountains">
-        
-          <circle cx = "350" cy = "65" r = "25" fill = "#e7c88b"/>
-
-          <polygon points = "0,260 130, 80 260, 260" fill = "#d9dfca"/>
-          <polygon points = "150, 260 290,40 440,260" fill = "#8fa68c"/>
-          <polygon points = "0,260 220,190 440, 260 440,300 0,300"
-          fill = "#405c49"/>
-
-        </svg>
+          <img
+          src = "./src/assets/ama-dablam.png"
+          alt = "Illustration of Amadablam"
+          >
         <span class = "mountain-llustration__caption">
           28°00' N · HIMALAYAS
         </span>
@@ -275,6 +266,8 @@
   Write everything you experienced in the trip and of course all the memories made.
 </p>
 </section>
+
+
 <footer class = "dashboard-footer">
   <span>
     Dablam
@@ -286,6 +279,27 @@
     </footer>
   </main>
 </div>
+
+<dialog class = "trip-dialog" id = "trip-dialog">
+  <form id = "trip-form">
+    <h2>Plan a trek!</h2>
+    <label for = "trip-name">Trek Name</label>
+    <input id = "trip-name" name = "tripName" type = "text" required>
+
+    <label for = trip-destination>Destination</label>
+    <input id = "trip-destination" name = "destination" type = "text" required>
+
+    <label for = "trip-start">Start date</label>
+    <input id = "trip-start" name = "startDate" type = "date" required>
+
+    <label for = "trip-end">End date</label>
+    <input id = "trip-end" name = "endDate" type = "date" required>
+
+    <button type = "submit">Save trek</button>
+    <button type = "button" id = "close-trip-form">Cancel</button>
+  </form>
+</dialog>
+
   <div
   class = "notification-message"
   id = "notification-message"
