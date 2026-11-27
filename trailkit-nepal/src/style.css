@@ -792,8 +792,8 @@ button{
 .trip-entry {
   margin-top: 19px;
   padding :16px;
-  border-top: 2px solid var (--forest-dark);
-  border-bottom: 1px dashed var(-border);
+  border-top: 2px solid var(--forest-dark);
+  border-bottom: 1px dashed var(--border);
   background: #f4f0e5;
 }
 
